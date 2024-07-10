@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_10_192411) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_10_194605) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +21,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_10_192411) do
     t.integer "genre_id"
     t.integer "system_id"
     t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -44,6 +51,21 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_10_192411) do
     t.string "systems"
     t.text "body"
     t.integer "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sub_genres", force: :cascade do |t|
+    t.integer "genre_id"
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "systems", force: :cascade do |t|
+    t.string "name"
+    t.string "company"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
