@@ -10,9 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_10_191721) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_10_192411) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "faqs", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "question"
+    t.string "game_title"
+    t.integer "genre_id"
+    t.integer "system_id"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.integer "user_id"
@@ -21,6 +32,18 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_10_191721) do
     t.integer "genre_id"
     t.integer "system_id"
     t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "game_title"
+    t.string "subtitle"
+    t.integer "genre_id"
+    t.string "systems"
+    t.text "body"
+    t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
