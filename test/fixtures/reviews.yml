@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  game_title: MyString
+  subtitle: MyString
+  genre_id: 1
+  systems: MyString
+  body: MyText
+  rating: 1
+
+two:
+  user_id: 1
+  game_title: MyString
+  subtitle: MyString
+  genre_id: 1
+  systems: MyString
+  body: MyText
+  rating: 1
