@@ -28,13 +28,28 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find_by(id: 7)
-    @user.first_name = "Test First name change"
+    @user = User.find_by(id: params[:id])
+    @user.first_name = params[:first_name] || @user.first_name
+    @user.last_name = params[:last_name] || @user.last_name
+    @user.email = params[:email] || @user.email
+    @user.username = params[:username] || @user.username
+    @user.prof_image = params[:prof_image] || @user.prof_image
+    @user.about_me = params[:about_me] || @user.about_me
 
     if @user.save
       render template: "users/show"
     else
       render json: { ERRORS: @user.errors.full_messages }
+    end
+  end
+
+  def destroy
+    @user = User.find_by(id: params[:id])
+    
+    if @user.destroy
+      render json: {message: "Account has been removed"}
+    else
+      render json: {ERRORS: @user.errors.full_messages}
     end
   end
 
