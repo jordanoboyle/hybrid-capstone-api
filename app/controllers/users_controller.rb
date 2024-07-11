@@ -53,4 +53,6 @@ class UsersController < ApplicationController
     end
   end
 
+  ##POTENTIALLY A NEW PATH TO UPDATE PASSWORD: OR ADD TO SAME UPDATE FUNCTION ABOVE (HANDLE ON FRONTEND)
+
 end
