@@ -27,7 +27,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find_by(id: 13)
+    @post = Post.find_by(id: params[:id])
     @post.user_id = params[:user_id]  || @post.user_id
     @post.title = params[:title]  || @post.title
     @post.game_title = params[:game_title]  || @post.game_title
