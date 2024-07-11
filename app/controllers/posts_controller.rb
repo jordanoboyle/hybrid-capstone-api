@@ -41,4 +41,14 @@ class PostsController < ApplicationController
       render json: {message: @post.errors.full_messages}
     end
   end
+
+  def destroy
+    @post = Post.find_by(id: params[:id])
+
+    if @post.destroy
+      render json: {message: "Your Post has been deleted"}
+    else
+      render json: {ERRORS: @post.errors.full_messages}
+    end
+  end
 end

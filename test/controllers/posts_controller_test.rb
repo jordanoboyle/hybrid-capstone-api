@@ -37,4 +37,11 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_equal "Updated name", data["title"]
   end
 
+  test "destroy" do
+    assert_difference "Post.count", -1 do
+      delete "/posts/#{Post.first.id}.json"
+      assert_response 200
+    end
+  end
+
 end
