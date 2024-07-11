@@ -73,3 +73,5 @@ gem "faker"
 gem "jwt"
 
 gem "pry"
+
+gem "rack-cors"
