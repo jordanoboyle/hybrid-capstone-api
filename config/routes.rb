@@ -18,4 +18,12 @@ Rails.application.routes.draw do
 
   #SESSIONS ROUTES
   post "/sessions"  => "sessions#create"
+
+  #Posts Routes
+  post "/posts" => "posts#create"
+  get "/posts"    => "posts#index"
+  get "/posts/:id"    => "posts#show"
+  patch "/posts/:id"  => "posts#update"
+  delete "/posts/:id" => "posts#destroy"
+  
 end
