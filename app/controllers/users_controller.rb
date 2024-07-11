@@ -36,7 +36,11 @@ class UsersController < ApplicationController
     @user.username = params[:username] || @user.username
     @user.prof_image = params[:prof_image] || @user.prof_image
     @user.about_me = params[:about_me] || @user.about_me
-
+    # p @user
+    # p @user.valid?
+    # @user.save
+    # p @user.errors.full_messages
+    # # binding.pry
     if @user.save
       render template: "users/show"
     else

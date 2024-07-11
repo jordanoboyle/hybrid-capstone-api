@@ -19,7 +19,11 @@ class PostsController < ApplicationController
     system_id: params[:system_id],
     body: params[:body]
     )
-    if @post.save
+    p @post
+    p @post.valid?
+    @post.save
+    p @post.errors.full_messages
+    if @post.save!
       render template: "posts/show"
     else
       render json: { ERRORs: @post.errors.full_messages }

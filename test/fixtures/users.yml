@@ -3,7 +3,7 @@
 one:
   first_name: MyString
   last_name: MyString
-  email: MyString
+  email: mystring123
   username: MyString
   password_digest: MyString
   admin: false

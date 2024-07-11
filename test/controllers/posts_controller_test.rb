@@ -23,7 +23,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
 
   test "create" do
     assert_difference "Post.count", 1 do
-      post "/posts.json", params: { user_id: 1, title: "Some Title", game_title: "test", genre_id: 1, system_id: 1, body: "Some Text"}
+      post "/posts.json", params: { user_id: User.first.id, title: "Some Title", game_title: "test", genre_id: Genre.first.id, system_id: System.first.id, body: "Some Text"}
       assert_response 200
     end
   end
