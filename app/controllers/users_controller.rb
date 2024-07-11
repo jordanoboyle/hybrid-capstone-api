@@ -27,4 +27,15 @@ class UsersController < ApplicationController
     render template: "users/show"
   end
 
+  def update
+    @user = User.find_by(id: 7)
+    @user.first_name = "Test First name change"
+
+    if @user.save
+      render template: "users/show"
+    else
+      render json: { ERRORS: @user.errors.full_messages }
+    end
+  end
+
 end
