@@ -71,3 +71,5 @@ gem "faker"
 
 # Adding the function of use toke authentication.
 gem "jwt"
+
+gem "pry"

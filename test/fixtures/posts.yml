@@ -7,6 +7,8 @@ one:
   genre_id: 1
   system_id: 1
   body: MyText
+  genre: {}
+  system: {}
 
 two:
   user_id: 1
@@ -15,3 +17,5 @@ two:
   genre_id: 1
   system_id: 1
   body: MyText
+  genre: {}
+  system: {}
