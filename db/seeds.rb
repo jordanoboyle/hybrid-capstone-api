@@ -112,27 +112,44 @@
 # Post.create(user_id: 5, title: general_topic_titles[4], game_title: nil, genre_id: nil, system_id: nil, body: Faker::Lorem.paragraph(sentence_count: 20, supplemental: true, random_sentences_to_add: 6))
 
 
-questions = [
-  {user_id: 3, question: "Is there a shortcut in Pillar of Autumn?", game_title: "Halo: Combat Evolved", genre_id: 18, system_id: 20, description: Faker::Lorem.sentences(number: 4, supplemental: true)},
-  {user_id: 2, question: "What chests to avoid to get Zodiac Spear?", game_title: "Final Fantasy 12", genre_id: 1, system_id: 22, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
-  {user_id: 1, question: "Help! I cannot beat Dracula?!", game_title: "Castlevania", genre_id: 8, system_id: 4, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
-  {user_id: 4, question: "Where to find the Master Sword?", game_title: "The Legend of Zelda: Breath of the Wild", genre_id: 2, system_id: 7, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
-  {user_id: 5, question: "How to unlock all characters?", game_title: "Super Smash Bros. Ultimate", genre_id: 15, system_id: 7, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
-  {user_id: 2, question: "Tips for defeating Sephiroth?", game_title: "Final Fantasy VII", genre_id: 1, system_id: 13, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
-  {user_id: 1, question: "How to find all Chaos Emeralds?", game_title: "Sonic the Hedgehog", genre_id: 9, system_id: 27, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
-  {user_id: 3, question: "Best strategy for taking down a Juggernaut?", game_title: "Call of Duty: Modern Warfare", genre_id: 18, system_id: 22, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
-  {user_id: 4, question: "How to catch all legendary Pokemon?", game_title: "Pokemon Sword and Shield", genre_id: 12, system_id: 7, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
-  {user_id: 5, question: "What are the best farming spots?", game_title: "World of Warcraft", genre_id: 11, system_id: 25, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
-  {user_id: 1, question: "How to unlock all endings?", game_title: "Nier: Automata", genre_id: 1, system_id: 22, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
-  {user_id: 2, question: "Where to find the best loot?", game_title: "Borderlands 3", genre_id: 18, system_id: 23, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
-  {user_id: 3, question: "Tips for surviving the first night?", game_title: "Minecraft", genre_id: 12, system_id: 25, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
-  {user_id: 4, question: "How to defeat Ganon?", game_title: "The Legend of Zelda: Ocarina of Time", genre_id: 2, system_id: 3, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
-  {user_id: 5, question: "Best build for solo play?", game_title: "Diablo III", genre_id: 4, system_id: 25, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
-  {user_id: 1, question: "How to unlock the secret boss?", game_title: "Kingdom Hearts", genre_id: 1, system_id: 13, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
-  {user_id: 2, question: "Where to find all treasure maps?", game_title: "Red Dead Redemption 2", genre_id: 14, system_id: 22, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
-  {user_id: 3, question: "How to get the best gear?", game_title: "Destiny 2", genre_id: 9, system_id: 23, description: Faker::Lorem.sentences(number: 4, supplemental: true) }
-]
+###FAQ SEED--> I PLAN ON ADJUSTING THIS EVENTUALLY BUT FOR MVP PURPOSES THIS IS FINE###
+# questions = [
+#   {user_id: 3, question: "Is there a shortcut in Pillar of Autumn?", game_title: "Halo: Combat Evolved", genre_id: 18, system_id: 20, description: Faker::Lorem.sentences(number: 4, supplemental: true)},
+#   {user_id: 2, question: "What chests to avoid to get Zodiac Spear?", game_title: "Final Fantasy 12", genre_id: 1, system_id: 22, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
+#   {user_id: 1, question: "Help! I cannot beat Dracula?!", game_title: "Castlevania", genre_id: 8, system_id: 4, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
+#   {user_id: 4, question: "Where to find the Master Sword?", game_title: "The Legend of Zelda: Breath of the Wild", genre_id: 2, system_id: 7, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
+#   {user_id: 5, question: "How to unlock all characters?", game_title: "Super Smash Bros. Ultimate", genre_id: 15, system_id: 7, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
+#   {user_id: 2, question: "Tips for defeating Sephiroth?", game_title: "Final Fantasy VII", genre_id: 1, system_id: 13, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
+#   {user_id: 1, question: "How to find all Chaos Emeralds?", game_title: "Sonic the Hedgehog", genre_id: 9, system_id: 27, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
+#   {user_id: 3, question: "Best strategy for taking down a Juggernaut?", game_title: "Call of Duty: Modern Warfare", genre_id: 18, system_id: 22, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
+#   {user_id: 4, question: "How to catch all legendary Pokemon?", game_title: "Pokemon Sword and Shield", genre_id: 12, system_id: 7, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
+#   {user_id: 5, question: "What are the best farming spots?", game_title: "World of Warcraft", genre_id: 11, system_id: 25, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
+#   {user_id: 1, question: "How to unlock all endings?", game_title: "Nier: Automata", genre_id: 1, system_id: 22, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
+#   {user_id: 2, question: "Where to find the best loot?", game_title: "Borderlands 3", genre_id: 18, system_id: 23, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
+#   {user_id: 3, question: "Tips for surviving the first night?", game_title: "Minecraft", genre_id: 12, system_id: 25, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
+#   {user_id: 4, question: "How to defeat Ganon?", game_title: "The Legend of Zelda: Ocarina of Time", genre_id: 2, system_id: 3, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
+#   {user_id: 5, question: "Best build for solo play?", game_title: "Diablo III", genre_id: 4, system_id: 25, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
+#   {user_id: 1, question: "How to unlock the secret boss?", game_title: "Kingdom Hearts", genre_id: 1, system_id: 13, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
+#   {user_id: 2, question: "Where to find all treasure maps?", game_title: "Red Dead Redemption 2", genre_id: 14, system_id: 22, description: Faker::Lorem.sentences(number: 4, supplemental: true) },
+#   {user_id: 3, question: "How to get the best gear?", game_title: "Destiny 2", genre_id: 9, system_id: 23, description: Faker::Lorem.sentences(number: 4, supplemental: true) }
+# ]
 
-questions.each do |data|
-  Faq.create(user_id: data.user_id, question: data.question, game_title: data.game_title, genre_id: data.genre_id, system_id: data.system_id, description: data.description)
-end
+# questions.each do |data|
+#   Faq.create(user_id: data[:user_id], question: data[:question], game_title: data[:game_title], genre_id: data[:genre_id], system_id: data[:system_id], description: data[:description])
+# end
+
+
+###Game REVIEW Seed: Again, likely will change later, but for MVP we are there.###
+# reviews = [
+#   { user_id: 3, game_title: "Alien Isolation", subtitle: "Helpless horror done right", genre_id: 8, systems: "Series X, PS5", body: Faker::Lorem.paragraph(sentence_count: 20, supplemental: true, random_sentences_to_add: 9), rating: 8 },
+#   { user_id: 2, game_title: "Cyberpunk 2077", subtitle: "Maybe don't release an unfinished product.", genre_id: 12, systems: "Series X, PS5, Xbox One, PS4, PC", body: Faker::Lorem.paragraph(sentence_count: 20, supplemental: true, random_sentences_to_add: 9), rating: 6 },
+#   { user_id: 1, game_title: "Mario vs Rabbids", subtitle: "Who thought this would be good?", genre_id: 20, systems: "Switch", body: Faker::Lorem.paragraph(sentence_count: 20, supplemental: true, random_sentences_to_add: 9), rating: 9 },
+#   { user_id: 4, game_title: "The Witcher 3", subtitle: "A fantasy RPG masterpiece", genre_id: 1, systems: "PS4, Xbox One, Switch, PC", body: Faker::Lorem.paragraph(sentence_count: 20, supplemental: true, random_sentences_to_add: 9), rating: 10 },
+#   { user_id: 5, game_title: "Hades", subtitle: "Roguelike action done right", genre_id: 9, systems: "Switch, PC", body: Faker::Lorem.paragraph(sentence_count: 20, supplemental: true, random_sentences_to_add: 9), rating: 9 },
+#   { user_id: 2, game_title: "Overwatch", subtitle: "Team-based shooter phenomenon", genre_id: 16, systems: "PS4, Xbox One, Switch, PC", body: Faker::Lorem.paragraph(sentence_count: 20, supplemental: true, random_sentences_to_add: 9), rating: 8 },
+#   { user_id: 1, game_title: "Stardew Valley", subtitle: "Farming and life simulation bliss", genre_id: 10, systems: "Switch, PC", body: Faker::Lorem.paragraph(sentence_count: 20, supplemental: true, random_sentences_to_add: 9), rating: 10 },
+#   { user_id: 3, game_title: "Final Fantasy XIV", subtitle: "MMORPG with an engaging story", genre_id: 11, systems: "PS4, PC", body: Faker::Lorem.paragraph(sentence_count: 20, supplemental: true, random_sentences_to_add: 9), rating: 8 }
+# ]
+# reviews.each do |data|
+#   Review.create(user_id: data[:user_id], game_title: data[:game_title], subtitle: data[:subtitle], genre_id: data[:genre_id], systems: data[:systems], body: data[:body])
+# end
