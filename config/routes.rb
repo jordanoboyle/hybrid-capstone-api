@@ -25,5 +25,13 @@ Rails.application.routes.draw do
   get "/posts/:id"    => "posts#show"
   patch "/posts/:id"  => "posts#update"
   delete "/posts/:id" => "posts#destroy"
+
+  #Genres Routes
+  get "/genres"    => "genres#index"
+  get "/genres/:id"    => "genres#show"
+
+  #Systems Routes
+  get "/systems"    => "systems#index"
+  get "/systems/:id"    => "systems#show"
   
 end
