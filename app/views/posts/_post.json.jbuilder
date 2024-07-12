@@ -10,6 +10,6 @@ json.created_at   post.created_at
 json.updated_at   post.updated_at
 
 #Association data
-json.genre   post.genre
+json.genre    post.genre
 json.system   post.system
 json.user     post.user
