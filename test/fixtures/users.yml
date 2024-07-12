@@ -4,7 +4,7 @@ one:
   first_name: MyString
   last_name: MyString
   email: mystring123
-  username: MyString
+  username: 123MyString
   password_digest: MyString
   admin: false
   prof_image: MyString
