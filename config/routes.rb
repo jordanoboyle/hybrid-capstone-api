@@ -26,6 +26,13 @@ Rails.application.routes.draw do
   patch "/posts/:id"  => "posts#update"
   delete "/posts/:id" => "posts#destroy"
 
+  #Faqs Routes
+  post "/faqs" => "faqs#create"
+  get "/faqs"    => "faqs#index"
+  get "/faqs/:id"    => "faqs#show"
+  patch "/faqs/:id"  => "faqs#update"
+  delete "/faqs/:id" => "faqs#destroy"
+
   #Genres Routes
   get "/genres"    => "genres#index"
   get "/genres/:id"    => "genres#show"
