@@ -5,7 +5,7 @@ one:
   last_name: MyString
   email: mystring123
   username: 123MyString
-  password_digest: MyString
+  password_digest: password
   admin: false
   prof_image: MyString
   about_me: MyString
@@ -15,7 +15,10 @@ two:
   last_name: MyString
   email: MyString
   username: MyString
-  password_digest: MyString
+  password_digest: password
   admin: false
   prof_image: MyString
   about_me: MyString
+
+
+  
