@@ -1,2 +1,6 @@
-json.extract! favorite_post, :id, :created_at, :updated_at
-json.url favorite_post_url(favorite_post, format: :json)
+
+json.id favorite_post.id
+json.user_id favorite_post.user_id
+json.post_id favorite_post.post_id
+json.created_at favorite_post.created_at
+json.updated_at favorite_post.updated_at
