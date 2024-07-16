@@ -13,3 +13,4 @@ json.updated_at    review.updated_at
 
 
 json.user          review.user
+json.genre         review.genre
