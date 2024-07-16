@@ -43,5 +43,8 @@ Rails.application.routes.draw do
   #Systems Routes
   get "/systems"    => "systems#index"
   get "/systems/:id"    => "systems#show"
-  
+
+  #FavoritePosts Routes
+  post "/favorite_posts" => "favorite_posts#create"
+  delete "/favorite_posts/:id" => "favorite_posts#destroy"
 end

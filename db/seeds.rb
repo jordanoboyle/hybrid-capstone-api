@@ -167,4 +167,4 @@ posts = Post.limit(10)
     post_id: posts.sample.id
   )
 end
-puts "Favorite Posts seed complete"
+puts "Favorite Posts seed complet"
