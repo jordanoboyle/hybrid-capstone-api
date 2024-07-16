@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   patch "/users/:id"  => "users#update"
   delete "/users/:id" => "users#destroy"
 
+  ## Direct Route for getting user info related to sign-in
+  get '/user-info', to: 'users#show'
+
   #SESSIONS ROUTES
   post "/sessions"  => "sessions#create"
 

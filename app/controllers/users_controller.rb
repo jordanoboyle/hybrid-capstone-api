@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   # before_action :authenticate_admin, only: [:index]
-  # before_action :authenticate_user, only: [:update, :destroy]
+  before_action :authenticate_user, only: [:update, :destroy, :show]
 
   def create
     @user = User.new(
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(id: params[:id])
+    @user = User.find_by(id: current_user.id)
     render template: "users/show"
   end
 

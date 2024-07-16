@@ -12,4 +12,14 @@ json.updated_at   post.updated_at
 #Association data
 json.genre    post.genre
 json.system   post.system
-json.user     post.user
+
+
+json.user do 
+  json.id post.user.id
+  json.email post.user.email
+  json.username post.user.username
+  json.first_name post.user.first_name
+  json.last_name post.user.last_name
+end
+
+
