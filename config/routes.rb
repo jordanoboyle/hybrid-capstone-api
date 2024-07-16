@@ -36,6 +36,12 @@ Rails.application.routes.draw do
   patch "/faqs/:id"  => "faqs#update"
   delete "/faqs/:id" => "faqs#destroy"
 
+  #ReviewsRoutes
+  post "/reviews" => "reviews#create"
+  get "/reviews"    => "reviews#index"
+  get "/reviews/:id"    => "reviews#show"
+  patch "/reviews/:id"  => "reviews#update"
+  delete "/reviews/:id" => "reviews#destroy"
   #Genres Routes
   get "/genres"    => "genres#index"
   get "/genres/:id"    => "genres#show"
