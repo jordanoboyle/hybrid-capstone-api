@@ -43,6 +43,15 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    @review = Review.find_by(id: params[:id])
+
+    if @review.destroy
+      render json: {message: "Review has been removed."}
+    else
+      render json: {ERROR: @review.errors.full_messages}
+    end
+  end
   
 
 end
