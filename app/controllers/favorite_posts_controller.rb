@@ -13,8 +13,8 @@ class FavoritePostsController < ApplicationController
   end
 
   def destroy
+    # raise StandardError, "For testing purposes"
     @favorite_post = FavoritePost.find_by(id: params[:id])
-
     if @favorite_post.destroy
       render json: {message: "This will destroy your world"}
     else
