@@ -39,6 +39,10 @@ class PostsController < ApplicationController
     @post.system_id = params[:system_id]  || @post.system_id
     @post.body = params[:body]  || @post.body
 
+    p @post
+    p @post.valid?
+    p @post.errors.full_messages
+
     if @post.save
       render template: "posts/show"
     else
