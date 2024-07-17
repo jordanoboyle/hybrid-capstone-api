@@ -9,6 +9,9 @@ json.body   post.body
 json.created_at   post.created_at
 json.updated_at   post.updated_at
 
+json.image_url_one post.image_url_one
+json.image_url_two post.image_url_two
+
 #Association data
 json.genre    post.genre
 json.system   post.system
