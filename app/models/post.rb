@@ -7,6 +7,8 @@ class Post < ApplicationRecord
   has_many :favorite_posts
   has_many :users, through: :favorite_posts
 
+  has_many :post_comments
+
 
   ##Custom validation option
   # validate :custom_validation

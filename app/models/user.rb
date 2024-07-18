@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :reviews
   
   has_many :favorite_posts
+  has_many :post_comments
   # has_many :posts, through: :favorite_posts
 
   
