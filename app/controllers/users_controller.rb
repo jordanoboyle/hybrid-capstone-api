@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  # before_action :authenticate_admin, only: [:index]
-  # before_action :authenticate_user, only: [:update, :destroy, :show]
+  before_action :authenticate_admin, only: [:index]
+  before_action :authenticate_user, only: [:update, :destroy, :show]
 
   def create
     @user = User.new(
