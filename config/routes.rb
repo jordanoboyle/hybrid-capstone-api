@@ -53,4 +53,11 @@ Rails.application.routes.draw do
   #FavoritePosts Routes
   post "/favorite_posts" => "favorite_posts#create"
   delete "/favorite_posts/:id" => "favorite_posts#destroy"
+
+   #PostComments Routes
+  post "/post_comments" => "post_comments#create"
+  get "/post_comments"    => "post_comments#index"
+  get "/post_comments/:id"    => "post_comments#show"
+  patch "/post_comments/:id"  => "post_comments#update"
+  delete "/post_comments/:id" => "post_comments#destroy"
 end

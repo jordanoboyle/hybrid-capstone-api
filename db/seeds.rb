@@ -267,34 +267,46 @@
 # puts "Favorite Posts seeded successfully!"
 
 ## Adding Images To Posts
-image_urls = [
-  "https://c8.alamy.com/comp/2DG102R/a-retro-gaming-graphic-design-illustration-in-a-1980s-or-1990s-style-with-colored-stripes-and-generic-gaming-controller-in-the-center-2DG102R.jpg",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfSkFg5CnsbFK6IVOHRl_Kh4PAkNmaiVxHjbB9eTwf4mcB0uhsmFVkH8IcWHPRGZZC8Kc&usqp=CAU",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD5rEUr6RmYIRDYFx1UMzZjKt79RjrOgVKdg&s",
-  "https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/orange-game-controller-splatter-art-gaming-nadia-chevrel.jpg",
-  "https://as2.ftcdn.net/v2/jpg/05/64/64/75/1000_F_564647547_myFAUqXF7TPt1lswTMyk3joV7uIwLNGc.jpg",
-  "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2023/04/38-exploded-nintendo-consoles-are-my-favorite-kind-of-video-game-art.jpg",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWlywrX65Rd_WcSu95sFEXeMDtga0xd3thyA&s",
-  "https://as1.ftcdn.net/v2/jpg/05/61/16/24/500_F_561162444_KKFEqeOdl6RwOJOJOJPC9CH2gMU0Qh1I.jpg",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFpnFXnso1vxmw1rQtIcwAuRHuqsMjBrbj9w&s"
-]
-if image_urls.empty?
-  puts "No Images in array"
-  exit
-end
-Post.all.each do |post|
-  ran_img_one, ran_img_two = image_urls.sample(2)
+# image_urls = [
+#   "https://c8.alamy.com/comp/2DG102R/a-retro-gaming-graphic-design-illustration-in-a-1980s-or-1990s-style-with-colored-stripes-and-generic-gaming-controller-in-the-center-2DG102R.jpg",
+#   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfSkFg5CnsbFK6IVOHRl_Kh4PAkNmaiVxHjbB9eTwf4mcB0uhsmFVkH8IcWHPRGZZC8Kc&usqp=CAU",
+#   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD5rEUr6RmYIRDYFx1UMzZjKt79RjrOgVKdg&s",
+#   "https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/orange-game-controller-splatter-art-gaming-nadia-chevrel.jpg",
+#   "https://as2.ftcdn.net/v2/jpg/05/64/64/75/1000_F_564647547_myFAUqXF7TPt1lswTMyk3joV7uIwLNGc.jpg",
+#   "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2023/04/38-exploded-nintendo-consoles-are-my-favorite-kind-of-video-game-art.jpg",
+#   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWlywrX65Rd_WcSu95sFEXeMDtga0xd3thyA&s",
+#   "https://as1.ftcdn.net/v2/jpg/05/61/16/24/500_F_561162444_KKFEqeOdl6RwOJOJOJPC9CH2gMU0Qh1I.jpg",
+#   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFpnFXnso1vxmw1rQtIcwAuRHuqsMjBrbj9w&s"
+# ]
+# if image_urls.empty?
+#   puts "No Images in array"
+#   exit
+# end
+# Post.all.each do |post|
+#   ran_img_one, ran_img_two = image_urls.sample(2)
 
-  post.image_url_one = ran_img_one
-  post.image_url_two = ran_img_two
-  post.save!
+#   post.image_url_one = ran_img_one
+#   post.image_url_two = ran_img_two
+#   post.save!
 
-end
-p "Post images for both image_one and image_two complete"
-
-
+# end
+# p "Post images for both image_one and image_two complete"
 
 
+## PostComments seed (skirts validations for proper DB insertion)
+# users = User.all
+# posts = Post.all
+
+# 25.times do
+#   user = users.sample
+#   post = posts.sample
+#   comment_data = {user_id: user.id, 
+#   post_id: post.id, 
+#   body: Faker::Lorem.paragraph(sentence_count: 4)}
+#   comment = PostComment.new(comment_data)
+#   comment.save!(validate: false)
+# end
+# puts "25 comments created successfully!"
 
 
 
@@ -305,21 +317,3 @@ p "Post images for both image_one and image_two complete"
 
 
 
-
-# "https://c8.alamy.com/comp/2DG102R/a-retro-gaming-graphic-design-illustration-in-a-1980s-or-1990s-style-with-colored-stripes-and-generic-gaming-controller-in-the-center-2DG102R.jpg"
-
-# "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfSkFg5CnsbFK6IVOHRl_Kh4PAkNmaiVxHjbB9eTwf4mcB0uhsmFVkH8IcWHPRGZZC8Kc&usqp=CAU"
-
-# "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD5rEUr6RmYIRDYFx1UMzZjKt79RjrOgVKdg&s"
-
-# "https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/orange-game-controller-splatter-art-gaming-nadia-chevrel.jpg"
-
-# "https://as2.ftcdn.net/v2/jpg/05/64/64/75/1000_F_564647547_myFAUqXF7TPt1lswTMyk3joV7uIwLNGc.jpg"
-
-# "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2023/04/38-exploded-nintendo-consoles-are-my-favorite-kind-of-video-game-art.jpg"
-
-# "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWlywrX65Rd_WcSu95sFEXeMDtga0xd3thyA&s"
-
-# "https://as1.ftcdn.net/v2/jpg/05/61/16/24/500_F_561162444_KKFEqeOdl6RwOJOJOJPC9CH2gMU0Qh1I.jpg"
-
-# "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFpnFXnso1vxmw1rQtIcwAuRHuqsMjBrbj9w&s"
