@@ -1,4 +1,5 @@
 class PostCommentsController < ApplicationController
+  # before_action :authenticate_user, only: [:update, :destroy, :create]
 
   def index
     @post_comments = PostComment.all
@@ -11,16 +12,37 @@ class PostCommentsController < ApplicationController
   end
 
   def create
+    @post_comment         = PostComment.new()
+    @post_comment.user_id = param[:user_id]
+    @post_comment.post_id = param[:post_id]
+    @post_comment.body    = param[:boby]
 
-    render json: { message: "Hello there from Create" }
-  
+    if @post_comment.save!
+      render template: "post_comments/show"
+    else
+      render json: {ERRORS: @post_comment.errors.full_messages}
+    end
   end
 
   def update
-    render json: { message: "Hello there from Update" }
+    @post_comment         = PostComment.find_by(id: params[:id])
+    @post_comment.body    = params[:body]
+
+    if @post_comment.save!
+      render template: "post_comments/show"
+    else
+      render json: {ERRORS: @post_comment.errors.full_messages}
+    end
+    
   end
 
   def destroy
-    render json: { message: "Hello there from Destroy" }
+    @post_comment = PostComment.find_by(id: params[:id])
+    
+    if @post_comment.destroy
+      render json: { message: "Comment has been removed" }
+    else
+      render json: {message: "Comment could not be removed", ERRORS: @post_comment.errors.full_messages}
+    end
   end
 end
