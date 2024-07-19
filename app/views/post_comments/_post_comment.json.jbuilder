@@ -8,7 +8,9 @@ json.created_at    post_comment.created_at
 json.updated_at    post_comment.updated_at
 
 
+
 json.user do 
-  json.id   post_comment.user.id
-  json.username   post_comment.user.username   
+  json.id            post_comment.user.id
+  json.prof_image    post_comment.user.prof_image
+  json.username      post_comment.user.username   
 end
