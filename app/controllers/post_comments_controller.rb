@@ -2,7 +2,9 @@ class PostCommentsController < ApplicationController
   # before_action :authenticate_user, only: [:update, :destroy, :create]
 
   def index
-    @post_comments = PostComment.where(post_id: params[:post_id])
+    pID = params[:post_id]
+    @post_comments = PostComment.where(post_id: pID)
+    p @post_comments
     render template: "post_comments/index"
   end
 
