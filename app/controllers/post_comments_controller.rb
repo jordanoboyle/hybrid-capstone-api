@@ -2,7 +2,7 @@ class PostCommentsController < ApplicationController
   # before_action :authenticate_user, only: [:update, :destroy, :create]
 
   def index
-    @post_comments = PostComment.all
+    @post_comments = PostComment.where(post_id: params[:post_id])
     render template: "post_comments/index"
   end
 
@@ -13,10 +13,10 @@ class PostCommentsController < ApplicationController
 
   def create
     @post_comment         = PostComment.new()
-    @post_comment.user_id = param[:user_id]
-    @post_comment.post_id = param[:post_id]
-    @post_comment.body    = param[:boby]
-
+    @post_comment.user_id = params[:user_id]
+    @post_comment.post_id = params[:post_id]
+    @post_comment.body    = params[:body]
+    
     if @post_comment.save!
       render template: "post_comments/show"
     else
